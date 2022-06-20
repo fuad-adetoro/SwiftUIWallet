@@ -12,19 +12,13 @@
 		067217E1286004C2001534E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067217E0286004C2001534E6 /* Assets.xcassets */; };
 		067217E4286004C2001534E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067217E3286004C2001534E6 /* Preview Assets.xcassets */; };
 		067217EE286004C2001534E6 /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217ED286004C2001534E6 /* WalletTests.swift */; };
-		067217F8286004C2001534E6 /* WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217F7286004C2001534E6 /* WalletUITests.swift */; };
-		067217FA286004C2001534E6 /* WalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217F9286004C2001534E6 /* WalletUITestsLaunchTests.swift */; };
+		0672180F28600CF4001534E6 /* WalletTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672180E28600CF4001534E6 /* WalletTabView.swift */; };
+		06721816286017DA001534E6 /* WalletColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06721815286017DA001534E6 /* WalletColor.swift */; };
+		06721819286019B7001534E6 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06721818286019B7001534E6 /* HomeTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		067217EA286004C2001534E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 067217D1286004BF001534E6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 067217D8286004BF001534E6;
-			remoteInfo = Wallet;
-		};
-		067217F4286004C2001534E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 067217D1286004BF001534E6 /* Project object */;
 			proxyType = 1;
@@ -41,9 +35,9 @@
 		067217E3286004C2001534E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		067217E9286004C2001534E6 /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		067217ED286004C2001534E6 /* WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTests.swift; sourceTree = "<group>"; };
-		067217F3286004C2001534E6 /* WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		067217F7286004C2001534E6 /* WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUITests.swift; sourceTree = "<group>"; };
-		067217F9286004C2001534E6 /* WalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0672180E28600CF4001534E6 /* WalletTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTabView.swift; sourceTree = "<group>"; };
+		06721815286017DA001534E6 /* WalletColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletColor.swift; sourceTree = "<group>"; };
+		06721818286019B7001534E6 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		067217F0286004C2001534E6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +63,6 @@
 			children = (
 				067217DB286004BF001534E6 /* Wallet */,
 				067217EC286004C2001534E6 /* WalletTests */,
-				067217F6286004C2001534E6 /* WalletUITests */,
 				067217DA286004BF001534E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +72,6 @@
 			children = (
 				067217D9286004BF001534E6 /* Wallet.app */,
 				067217E9286004C2001534E6 /* WalletTests.xctest */,
-				067217F3286004C2001534E6 /* WalletUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +79,10 @@
 		067217DB286004BF001534E6 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				06721809286005DD001534E6 /* Extensions & Extras */,
+				06721806286005CC001534E6 /* Model */,
+				06721807286005D1001534E6 /* View */,
+				06721808286005D7001534E6 /* ViewModel */,
 				067217DC286004BF001534E6 /* WalletApp.swift */,
 				067217DE286004BF001534E6 /* ContentView.swift */,
 				067217E0286004C2001534E6 /* Assets.xcassets */,
@@ -118,13 +107,59 @@
 			path = WalletTests;
 			sourceTree = "<group>";
 		};
-		067217F6286004C2001534E6 /* WalletUITests */ = {
+		06721806286005CC001534E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				067217F7286004C2001534E6 /* WalletUITests.swift */,
-				067217F9286004C2001534E6 /* WalletUITestsLaunchTests.swift */,
+				06721814286017C5001534E6 /* WalletColor */,
 			);
-			path = WalletUITests;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06721807286005D1001534E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06721817286019AA001534E6 /* HomeTabView */,
+				0672180D28600CE2001534E6 /* WalletTabView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06721808286005D7001534E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		06721809286005DD001534E6 /* Extensions & Extras */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Extensions & Extras";
+			sourceTree = "<group>";
+		};
+		0672180D28600CE2001534E6 /* WalletTabView */ = {
+			isa = PBXGroup;
+			children = (
+				0672180E28600CF4001534E6 /* WalletTabView.swift */,
+			);
+			path = WalletTabView;
+			sourceTree = "<group>";
+		};
+		06721814286017C5001534E6 /* WalletColor */ = {
+			isa = PBXGroup;
+			children = (
+				06721815286017DA001534E6 /* WalletColor.swift */,
+			);
+			path = WalletColor;
+			sourceTree = "<group>";
+		};
+		06721817286019AA001534E6 /* HomeTabView */ = {
+			isa = PBXGroup;
+			children = (
+				06721818286019B7001534E6 /* HomeTabView.swift */,
+			);
+			path = HomeTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +200,6 @@
 			productReference = 067217E9286004C2001534E6 /* WalletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		067217F2286004C2001534E6 /* WalletUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 06721803286004C2001534E6 /* Build configuration list for PBXNativeTarget "WalletUITests" */;
-			buildPhases = (
-				067217EF286004C2001534E6 /* Sources */,
-				067217F0286004C2001534E6 /* Frameworks */,
-				067217F1286004C2001534E6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				067217F5286004C2001534E6 /* PBXTargetDependency */,
-			);
-			name = WalletUITests;
-			productName = WalletUITests;
-			productReference = 067217F3286004C2001534E6 /* WalletUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +214,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					067217E8286004C2001534E6 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 067217D8286004BF001534E6;
-					};
-					067217F2286004C2001534E6 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 067217D8286004BF001534E6;
 					};
@@ -221,7 +234,6 @@
 			targets = (
 				067217D8286004BF001534E6 /* Wallet */,
 				067217E8286004C2001534E6 /* WalletTests */,
-				067217F2286004C2001534E6 /* WalletUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,13 +255,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		067217F1286004C2001534E6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,7 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06721816286017DA001534E6 /* WalletColor.swift in Sources */,
 				067217DF286004BF001534E6 /* ContentView.swift in Sources */,
+				06721819286019B7001534E6 /* HomeTabView.swift in Sources */,
+				0672180F28600CF4001534E6 /* WalletTabView.swift in Sources */,
 				067217DD286004BF001534E6 /* WalletApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,15 +278,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		067217EF286004C2001534E6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				067217F8286004C2001534E6 /* WalletUITests.swift in Sources */,
-				067217FA286004C2001534E6 /* WalletUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +285,6 @@
 			isa = PBXTargetDependency;
 			target = 067217D8286004BF001534E6 /* Wallet */;
 			targetProxy = 067217EA286004C2001534E6 /* PBXContainerItemProxy */;
-		};
-		067217F5286004C2001534E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 067217D8286004BF001534E6 /* Wallet */;
-			targetProxy = 067217F4286004C2001534E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -423,8 +417,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,8 +447,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,42 +503,6 @@
 			};
 			name = Release;
 		};
-		06721804286004C2001534E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T4LCWHVG69;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fuadadetoro.WalletUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Wallet;
-			};
-			name = Debug;
-		};
-		06721805286004C2001534E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T4LCWHVG69;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fuadadetoro.WalletUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Wallet;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,15 +529,6 @@
 			buildConfigurations = (
 				06721801286004C2001534E6 /* Debug */,
 				06721802286004C2001534E6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		06721803286004C2001534E6 /* Build configuration list for PBXNativeTarget "WalletUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				06721804286004C2001534E6 /* Debug */,
-				06721805286004C2001534E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
