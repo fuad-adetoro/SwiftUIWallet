@@ -7,20 +7,6 @@
 
 import Foundation
 
-enum Throwable<T: Decodable>: Decodable {
-    case success(T)
-    case failure(Error)
-
-    init(from decoder: Decoder) throws {
-        do {
-            let decoded = try T(from: decoder)
-            self = .success(decoded)
-        } catch let error {
-            self = .failure(error)
-        }
-    }
-}
-
 class MockJSON {
     static let shared = MockJSON()
     
@@ -154,40 +140,16 @@ class MockJSON {
    ]
    """.data(using: .utf8)!
     
-    func retrieveData() throws -> Data {
-        /*let decoder = JSONDecoder()
-        let throwables = try decoder.decode([Throwable<GroceryProduct>].self, from: json)
-        let products = throwables.compactMap { $0.value }*/
+    func retrieveData() throws -> [WalletFullTransaction] {
         
         let decoder = JSONDecoder()
         
-        /*let throwables = try decoder.decode([Throwable<WalletData>].self, from: jsonData)
-        let walletData = throwables.compactMap { newData in
-            print("NEW DATA: \(newData)")
-        }*/
+        var fullTransactions = [WalletFullTransaction]()
         
         if let jsonPetitions = try? decoder.decode([WalletFullTransaction].self, from: jsonData) {
-            //petitions = jsonPetitions.results
-            //tableView.reloadData()
-            print("JSON: \(jsonPetitions)")
+            fullTransactions = jsonPetitions
         }
-        
-        /*walletData
-            .publisher
-            */
-        
-        
          
-        return jsonData
-    }
-    
-    func convertToDictionary(data: Data) -> [[String: Any]]? {
-        do {
-            return try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        return nil 
+        return fullTransactions
     }
 }

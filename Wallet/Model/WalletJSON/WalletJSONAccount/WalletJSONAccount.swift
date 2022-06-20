@@ -18,7 +18,7 @@ struct WalletJSONAccount: Codable {
         case accountPublicKey = "accountPublicKey"
         case walletID = "walletId"
         case accountName = "accountName"
-        case imageURL = "imageURL"
+        case imageURL = "imageUrl"
         case walletType = "walletType"
         
         case balance = "balance"

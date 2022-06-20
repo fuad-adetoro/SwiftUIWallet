@@ -13,6 +13,8 @@ struct WalletData: Codable {
     
     var jsonAccount: WalletJSONAccount?
     var transaction: WalletJSONTransaction?
+    var jsonCurrency: WalletJSONCurrency? = nil
+    var devicePublicKey: WalletDevicePublicKey? = nil
     
     init(from decoder: Decoder) throws {
         let valuesInContainer = try decoder.container(keyedBy: CodingKeys.self)
@@ -33,6 +35,10 @@ struct WalletData: Codable {
         jsonAccount = try valuesInContainer.decode(WalletJSONAccount.self, forKey: .jsonAccount)
         
         transaction = try valuesInContainer.decode(WalletJSONTransaction.self, forKey: .transaction)
+        
+        //devicePublicKey = try valuesInContainer.decode(WalletDevicePublicKey.self, forKey: .devicePublicKey)
+        
+        //jsonCurrency = try valuesInContainer.decode(WalletJSONCurrency.self, forKey: .jsonCurrency)
         
         if let chainRateString = try? valuesInContainer.decode(String.self, forKey: .chainRate),
             let rate = Double(chainRateString) {
@@ -67,5 +73,8 @@ struct WalletData: Codable {
         case assetRate = "assetRate"
         case jsonAccount = "account"
         case transaction = "transaction"
+        case jsonCurrency = "balanceCurrency"
+        case devicePublicKey = "devicePublicKey"
     }
 }
+

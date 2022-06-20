@@ -11,8 +11,13 @@
 		066195E32860905D008DEC29 /* SubWalletTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195E22860905D008DEC29 /* SubWalletTabView.swift */; };
 		066195E6286090CF008DEC29 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195E5286090CF008DEC29 /* SettingsTabView.swift */; };
 		066195EA2860913A008DEC29 /* InboxTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195E92860913A008DEC29 /* InboxTabView.swift */; };
+		066195ED286091E9008DEC29 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195EC286091E9008DEC29 /* WalletViewModel.swift */; };
+		066195F528609E9D008DEC29 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195F428609E9D008DEC29 /* TransactionView.swift */; };
+		066195F72860A09C008DEC29 /* UIViewController+viewControllerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195F62860A09C008DEC29 /* UIViewController+viewControllerHolder.swift */; };
+		066195F92860AC3E008DEC29 /* Date+dateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195F82860AC3E008DEC29 /* Date+dateFormat.swift */; };
+		066195FC2860B73F008DEC29 /* WalletJSONCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195FB2860B73F008DEC29 /* WalletJSONCurrency.swift */; };
+		066195FF2860C045008DEC29 /* WalletDevicePublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195FE2860C045008DEC29 /* WalletDevicePublicKey.swift */; };
 		067217DD286004BF001534E6 /* WalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217DC286004BF001534E6 /* WalletApp.swift */; };
-		067217DF286004BF001534E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217DE286004BF001534E6 /* ContentView.swift */; };
 		067217E1286004C2001534E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067217E0286004C2001534E6 /* Assets.xcassets */; };
 		067217E4286004C2001534E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067217E3286004C2001534E6 /* Preview Assets.xcassets */; };
 		067217EE286004C2001534E6 /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217ED286004C2001534E6 /* WalletTests.swift */; };
@@ -43,9 +48,14 @@
 		066195E22860905D008DEC29 /* SubWalletTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubWalletTabView.swift; sourceTree = "<group>"; };
 		066195E5286090CF008DEC29 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
 		066195E92860913A008DEC29 /* InboxTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTabView.swift; sourceTree = "<group>"; };
+		066195EC286091E9008DEC29 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		066195F428609E9D008DEC29 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		066195F62860A09C008DEC29 /* UIViewController+viewControllerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+viewControllerHolder.swift"; sourceTree = "<group>"; };
+		066195F82860AC3E008DEC29 /* Date+dateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dateFormat.swift"; sourceTree = "<group>"; };
+		066195FB2860B73F008DEC29 /* WalletJSONCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletJSONCurrency.swift; sourceTree = "<group>"; };
+		066195FE2860C045008DEC29 /* WalletDevicePublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDevicePublicKey.swift; sourceTree = "<group>"; };
 		067217D9286004BF001534E6 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		067217DC286004BF001534E6 /* WalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApp.swift; sourceTree = "<group>"; };
-		067217DE286004BF001534E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		067217E0286004C2001534E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		067217E3286004C2001534E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		067217E9286004C2001534E6 /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +133,38 @@
 			path = TabViews;
 			sourceTree = "<group>";
 		};
+		066195EB286091D5008DEC29 /* WalletViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				066195EC286091E9008DEC29 /* WalletViewModel.swift */,
+			);
+			path = WalletViewModel;
+			sourceTree = "<group>";
+		};
+		066195F328609E90008DEC29 /* TransactionView */ = {
+			isa = PBXGroup;
+			children = (
+				066195F428609E9D008DEC29 /* TransactionView.swift */,
+			);
+			path = TransactionView;
+			sourceTree = "<group>";
+		};
+		066195FA2860B733008DEC29 /* WalletJSONCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				066195FB2860B73F008DEC29 /* WalletJSONCurrency.swift */,
+			);
+			path = WalletJSONCurrency;
+			sourceTree = "<group>";
+		};
+		066195FD2860C039008DEC29 /* WalletDevicePublicKey */ = {
+			isa = PBXGroup;
+			children = (
+				066195FE2860C045008DEC29 /* WalletDevicePublicKey.swift */,
+			);
+			path = WalletDevicePublicKey;
+			sourceTree = "<group>";
+		};
 		067217D0286004BF001534E6 = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +191,6 @@
 				06721807286005D1001534E6 /* View */,
 				06721808286005D7001534E6 /* ViewModel */,
 				067217DC286004BF001534E6 /* WalletApp.swift */,
-				067217DE286004BF001534E6 /* ContentView.swift */,
 				067217E0286004C2001534E6 /* Assets.xcassets */,
 				067217E2286004C2001534E6 /* Preview Content */,
 			);
@@ -184,6 +225,7 @@
 		06721807286005D1001534E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				066195F328609E90008DEC29 /* TransactionView */,
 				066195E828609111008DEC29 /* TabViews */,
 				0672180D28600CE2001534E6 /* TabContentView */,
 			);
@@ -193,6 +235,7 @@
 		06721808286005D7001534E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				066195EB286091D5008DEC29 /* WalletViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -200,6 +243,8 @@
 		06721809286005DD001534E6 /* Extensions & Extras */ = {
 			isa = PBXGroup;
 			children = (
+				066195F62860A09C008DEC29 /* UIViewController+viewControllerHolder.swift */,
+				066195F82860AC3E008DEC29 /* Date+dateFormat.swift */,
 			);
 			path = "Extensions & Extras";
 			sourceTree = "<group>";
@@ -279,8 +324,10 @@
 		0672182C28606BE7001534E6 /* WalletJSON */ = {
 			isa = PBXGroup;
 			children = (
+				066195FD2860C039008DEC29 /* WalletDevicePublicKey */,
 				066195DE28607FC0008DEC29 /* WalletFullTransaction */,
 				0672182D28606CD9001534E6 /* WalletData */,
+				066195FA2860B733008DEC29 /* WalletJSONCurrency */,
 				0672182928606B41001534E6 /* WalletJSONDevicePublicKey */,
 				0672182628606A8D001534E6 /* WalletJSONBalanceCurrency */,
 				0672182328606957001534E6 /* WalletJSONAccount */,
@@ -400,14 +447,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0672182828606AAB001534E6 /* WalletJSONBalanceCurrency.swift in Sources */,
+				066195FC2860B73F008DEC29 /* WalletJSONCurrency.swift in Sources */,
+				066195F72860A09C008DEC29 /* UIViewController+viewControllerHolder.swift in Sources */,
 				0672181F28606825001534E6 /* WalletJSONTransaction.swift in Sources */,
 				066195E028607FCF008DEC29 /* WalletFullTransaction.swift in Sources */,
 				0672182F28606CED001534E6 /* WalletData.swift in Sources */,
 				06721816286017DA001534E6 /* WalletColor.swift in Sources */,
-				067217DF286004BF001534E6 /* ContentView.swift in Sources */,
 				0672182B28606B62001534E6 /* WalletJSONDevicePublicKey.swift in Sources */,
+				066195F92860AC3E008DEC29 /* Date+dateFormat.swift in Sources */,
 				06721819286019B7001534E6 /* HomeTabView.swift in Sources */,
 				066195E6286090CF008DEC29 /* SettingsTabView.swift in Sources */,
+				066195ED286091E9008DEC29 /* WalletViewModel.swift in Sources */,
+				066195FF2860C045008DEC29 /* WalletDevicePublicKey.swift in Sources */,
 				066195E32860905D008DEC29 /* SubWalletTabView.swift in Sources */,
 				0672182528606975001534E6 /* WalletJSONAccount.swift in Sources */,
 				06721822286068F4001534E6 /* SubWalletID.swift in Sources */,
@@ -415,6 +466,7 @@
 				0672180F28600CF4001534E6 /* TabContentView.swift in Sources */,
 				067217DD286004BF001534E6 /* WalletApp.swift in Sources */,
 				066195EA2860913A008DEC29 /* InboxTabView.swift in Sources */,
+				066195F528609E9D008DEC29 /* TransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

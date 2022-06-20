@@ -12,10 +12,14 @@ struct SubWalletTabView: View {
     
     var body: some View {
         TabContentView {
-            List {
-                Section {
-                    EmptyView()
+            ZStack {
+                List {
+                    Section {
+                        EmptyView()
+                    }
                 }
+                
+                Text("No Sub-Wallets")
             }
         }
         .onTapGesture {

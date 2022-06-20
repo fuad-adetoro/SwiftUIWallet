@@ -8,6 +8,7 @@
 import Foundation
 
 struct WalletFullTransaction: Decodable {
+    var uuid: UUID = .init()
     var type: String?
     var data: WalletData?
     

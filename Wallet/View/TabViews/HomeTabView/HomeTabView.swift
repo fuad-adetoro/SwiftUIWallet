@@ -11,15 +11,13 @@ struct HomeTabView: View {
     @State private var selectedTab = 1
     
     var body: some View {
-        GeometryReader { geometry in
-            TabView(selection: $selectedTab) {
-                SubWalletTabView(selectedTab: $selectedTab)
-                
-                InboxTabView(selectedTab: $selectedTab)
-                
-                SettingsTabView(selectedTab: $selectedTab)
-            } 
-            .accentColor(WalletColor.mainColor.convertToColor())
+        TabView(selection: $selectedTab) {
+            SubWalletTabView(selectedTab: $selectedTab)
+            
+            InboxTabView(selectedTab: $selectedTab)
+            
+            SettingsTabView(selectedTab: $selectedTab)
         }
+        .accentColor(WalletColor.mainColor.convertToColor())
     }
 } 
