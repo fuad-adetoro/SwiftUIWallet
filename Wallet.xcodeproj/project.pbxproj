@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		066195E028607FCF008DEC29 /* WalletFullTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195DF28607FCF008DEC29 /* WalletFullTransaction.swift */; };
 		067217DD286004BF001534E6 /* WalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217DC286004BF001534E6 /* WalletApp.swift */; };
 		067217DF286004BF001534E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217DE286004BF001534E6 /* ContentView.swift */; };
 		067217E1286004C2001534E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067217E0286004C2001534E6 /* Assets.xcassets */; };
 		067217E4286004C2001534E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067217E3286004C2001534E6 /* Preview Assets.xcassets */; };
 		067217EE286004C2001534E6 /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217ED286004C2001534E6 /* WalletTests.swift */; };
-		0672180F28600CF4001534E6 /* WalletTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672180E28600CF4001534E6 /* WalletTabView.swift */; };
+		0672180F28600CF4001534E6 /* TabContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672180E28600CF4001534E6 /* TabContentView.swift */; };
 		06721816286017DA001534E6 /* WalletColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06721815286017DA001534E6 /* WalletColor.swift */; };
 		06721819286019B7001534E6 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06721818286019B7001534E6 /* HomeTabView.swift */; };
+		0672181C286063C9001534E6 /* MockJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672181B286063C9001534E6 /* MockJSON.swift */; };
+		0672181F28606825001534E6 /* WalletJSONTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672181E28606825001534E6 /* WalletJSONTransaction.swift */; };
+		06721822286068F4001534E6 /* SubWalletID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06721821286068F4001534E6 /* SubWalletID.swift */; };
+		0672182528606975001534E6 /* WalletJSONAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672182428606975001534E6 /* WalletJSONAccount.swift */; };
+		0672182828606AAB001534E6 /* WalletJSONBalanceCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672182728606AAB001534E6 /* WalletJSONBalanceCurrency.swift */; };
+		0672182B28606B62001534E6 /* WalletJSONDevicePublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672182A28606B62001534E6 /* WalletJSONDevicePublicKey.swift */; };
+		0672182F28606CED001534E6 /* WalletData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672182E28606CED001534E6 /* WalletData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		066195DF28607FCF008DEC29 /* WalletFullTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletFullTransaction.swift; sourceTree = "<group>"; };
 		067217D9286004BF001534E6 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		067217DC286004BF001534E6 /* WalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApp.swift; sourceTree = "<group>"; };
 		067217DE286004BF001534E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,9 +44,16 @@
 		067217E3286004C2001534E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		067217E9286004C2001534E6 /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		067217ED286004C2001534E6 /* WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTests.swift; sourceTree = "<group>"; };
-		0672180E28600CF4001534E6 /* WalletTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTabView.swift; sourceTree = "<group>"; };
+		0672180E28600CF4001534E6 /* TabContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentView.swift; sourceTree = "<group>"; };
 		06721815286017DA001534E6 /* WalletColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletColor.swift; sourceTree = "<group>"; };
 		06721818286019B7001534E6 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		0672181B286063C9001534E6 /* MockJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSON.swift; sourceTree = "<group>"; };
+		0672181E28606825001534E6 /* WalletJSONTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletJSONTransaction.swift; sourceTree = "<group>"; };
+		06721821286068F4001534E6 /* SubWalletID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubWalletID.swift; sourceTree = "<group>"; };
+		0672182428606975001534E6 /* WalletJSONAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletJSONAccount.swift; sourceTree = "<group>"; };
+		0672182728606AAB001534E6 /* WalletJSONBalanceCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletJSONBalanceCurrency.swift; sourceTree = "<group>"; };
+		0672182A28606B62001534E6 /* WalletJSONDevicePublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletJSONDevicePublicKey.swift; sourceTree = "<group>"; };
+		0672182E28606CED001534E6 /* WalletData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		066195DE28607FC0008DEC29 /* WalletFullTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				066195DF28607FCF008DEC29 /* WalletFullTransaction.swift */,
+			);
+			path = WalletFullTransaction;
+			sourceTree = "<group>";
+		};
 		067217D0286004BF001534E6 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +134,7 @@
 		06721806286005CC001534E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0672182C28606BE7001534E6 /* WalletJSON */,
 				06721814286017C5001534E6 /* WalletColor */,
 			);
 			path = Model;
@@ -119,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				06721817286019AA001534E6 /* HomeTabView */,
-				0672180D28600CE2001534E6 /* WalletTabView */,
+				0672180D28600CE2001534E6 /* TabContentView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,12 +163,12 @@
 			path = "Extensions & Extras";
 			sourceTree = "<group>";
 		};
-		0672180D28600CE2001534E6 /* WalletTabView */ = {
+		0672180D28600CE2001534E6 /* TabContentView */ = {
 			isa = PBXGroup;
 			children = (
-				0672180E28600CF4001534E6 /* WalletTabView.swift */,
+				0672180E28600CF4001534E6 /* TabContentView.swift */,
 			);
-			path = WalletTabView;
+			path = TabContentView;
 			sourceTree = "<group>";
 		};
 		06721814286017C5001534E6 /* WalletColor */ = {
@@ -160,6 +185,77 @@
 				06721818286019B7001534E6 /* HomeTabView.swift */,
 			);
 			path = HomeTabView;
+			sourceTree = "<group>";
+		};
+		0672181A286063B8001534E6 /* MockJSON */ = {
+			isa = PBXGroup;
+			children = (
+				0672181B286063C9001534E6 /* MockJSON.swift */,
+			);
+			path = MockJSON;
+			sourceTree = "<group>";
+		};
+		0672181D286067FE001534E6 /* WalletJSONTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				0672181E28606825001534E6 /* WalletJSONTransaction.swift */,
+			);
+			path = WalletJSONTransaction;
+			sourceTree = "<group>";
+		};
+		067218202860689F001534E6 /* SubWalletID */ = {
+			isa = PBXGroup;
+			children = (
+				06721821286068F4001534E6 /* SubWalletID.swift */,
+			);
+			path = SubWalletID;
+			sourceTree = "<group>";
+		};
+		0672182328606957001534E6 /* WalletJSONAccount */ = {
+			isa = PBXGroup;
+			children = (
+				0672182428606975001534E6 /* WalletJSONAccount.swift */,
+			);
+			path = WalletJSONAccount;
+			sourceTree = "<group>";
+		};
+		0672182628606A8D001534E6 /* WalletJSONBalanceCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				0672182728606AAB001534E6 /* WalletJSONBalanceCurrency.swift */,
+			);
+			path = WalletJSONBalanceCurrency;
+			sourceTree = "<group>";
+		};
+		0672182928606B41001534E6 /* WalletJSONDevicePublicKey */ = {
+			isa = PBXGroup;
+			children = (
+				0672182A28606B62001534E6 /* WalletJSONDevicePublicKey.swift */,
+			);
+			path = WalletJSONDevicePublicKey;
+			sourceTree = "<group>";
+		};
+		0672182C28606BE7001534E6 /* WalletJSON */ = {
+			isa = PBXGroup;
+			children = (
+				066195DE28607FC0008DEC29 /* WalletFullTransaction */,
+				0672182D28606CD9001534E6 /* WalletData */,
+				0672182928606B41001534E6 /* WalletJSONDevicePublicKey */,
+				0672182628606A8D001534E6 /* WalletJSONBalanceCurrency */,
+				0672182328606957001534E6 /* WalletJSONAccount */,
+				067218202860689F001534E6 /* SubWalletID */,
+				0672181D286067FE001534E6 /* WalletJSONTransaction */,
+				0672181A286063B8001534E6 /* MockJSON */,
+			);
+			path = WalletJSON;
+			sourceTree = "<group>";
+		};
+		0672182D28606CD9001534E6 /* WalletData */ = {
+			isa = PBXGroup;
+			children = (
+				0672182E28606CED001534E6 /* WalletData.swift */,
+			);
+			path = WalletData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +358,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0672182828606AAB001534E6 /* WalletJSONBalanceCurrency.swift in Sources */,
+				0672181F28606825001534E6 /* WalletJSONTransaction.swift in Sources */,
+				066195E028607FCF008DEC29 /* WalletFullTransaction.swift in Sources */,
+				0672182F28606CED001534E6 /* WalletData.swift in Sources */,
 				06721816286017DA001534E6 /* WalletColor.swift in Sources */,
 				067217DF286004BF001534E6 /* ContentView.swift in Sources */,
+				0672182B28606B62001534E6 /* WalletJSONDevicePublicKey.swift in Sources */,
 				06721819286019B7001534E6 /* HomeTabView.swift in Sources */,
-				0672180F28600CF4001534E6 /* WalletTabView.swift in Sources */,
+				0672182528606975001534E6 /* WalletJSONAccount.swift in Sources */,
+				06721822286068F4001534E6 /* SubWalletID.swift in Sources */,
+				0672181C286063C9001534E6 /* MockJSON.swift in Sources */,
+				0672180F28600CF4001534E6 /* TabContentView.swift in Sources */,
 				067217DD286004BF001534E6 /* WalletApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

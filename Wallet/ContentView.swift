@@ -8,20 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    init() {
-        UITabBar.appearance().isTranslucent = false
-        UITabBar.appearance().unselectedItemTintColor = UIColor(Color.primary)
-    }
-    
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                WalletColor.mainBackgroundColor.convertToColor()
-                
-                HomeTabView()
-            }
-            .ignoresSafeArea()
-        }
+        HomeTabView()
     }
 }
 
