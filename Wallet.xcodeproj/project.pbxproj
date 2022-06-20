@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		066195E028607FCF008DEC29 /* WalletFullTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195DF28607FCF008DEC29 /* WalletFullTransaction.swift */; };
+		066195E32860905D008DEC29 /* SubWalletTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195E22860905D008DEC29 /* SubWalletTabView.swift */; };
+		066195E6286090CF008DEC29 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195E5286090CF008DEC29 /* SettingsTabView.swift */; };
+		066195EA2860913A008DEC29 /* InboxTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066195E92860913A008DEC29 /* InboxTabView.swift */; };
 		067217DD286004BF001534E6 /* WalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217DC286004BF001534E6 /* WalletApp.swift */; };
 		067217DF286004BF001534E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067217DE286004BF001534E6 /* ContentView.swift */; };
 		067217E1286004C2001534E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067217E0286004C2001534E6 /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		066195DF28607FCF008DEC29 /* WalletFullTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletFullTransaction.swift; sourceTree = "<group>"; };
+		066195E22860905D008DEC29 /* SubWalletTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubWalletTabView.swift; sourceTree = "<group>"; };
+		066195E5286090CF008DEC29 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
+		066195E92860913A008DEC29 /* InboxTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTabView.swift; sourceTree = "<group>"; };
 		067217D9286004BF001534E6 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		067217DC286004BF001534E6 /* WalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApp.swift; sourceTree = "<group>"; };
 		067217DE286004BF001534E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +86,41 @@
 				066195DF28607FCF008DEC29 /* WalletFullTransaction.swift */,
 			);
 			path = WalletFullTransaction;
+			sourceTree = "<group>";
+		};
+		066195E128609048008DEC29 /* SubWalletTabView */ = {
+			isa = PBXGroup;
+			children = (
+				066195E22860905D008DEC29 /* SubWalletTabView.swift */,
+			);
+			path = SubWalletTabView;
+			sourceTree = "<group>";
+		};
+		066195E4286090C0008DEC29 /* SettingsTabView */ = {
+			isa = PBXGroup;
+			children = (
+				066195E5286090CF008DEC29 /* SettingsTabView.swift */,
+			);
+			path = SettingsTabView;
+			sourceTree = "<group>";
+		};
+		066195E728609109008DEC29 /* InboxTabView */ = {
+			isa = PBXGroup;
+			children = (
+				066195E92860913A008DEC29 /* InboxTabView.swift */,
+			);
+			path = InboxTabView;
+			sourceTree = "<group>";
+		};
+		066195E828609111008DEC29 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				06721817286019AA001534E6 /* HomeTabView */,
+				066195E128609048008DEC29 /* SubWalletTabView */,
+				066195E728609109008DEC29 /* InboxTabView */,
+				066195E4286090C0008DEC29 /* SettingsTabView */,
+			);
+			path = TabViews;
 			sourceTree = "<group>";
 		};
 		067217D0286004BF001534E6 = {
@@ -143,7 +184,7 @@
 		06721807286005D1001534E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				06721817286019AA001534E6 /* HomeTabView */,
+				066195E828609111008DEC29 /* TabViews */,
 				0672180D28600CE2001534E6 /* TabContentView */,
 			);
 			path = View;
@@ -366,11 +407,14 @@
 				067217DF286004BF001534E6 /* ContentView.swift in Sources */,
 				0672182B28606B62001534E6 /* WalletJSONDevicePublicKey.swift in Sources */,
 				06721819286019B7001534E6 /* HomeTabView.swift in Sources */,
+				066195E6286090CF008DEC29 /* SettingsTabView.swift in Sources */,
+				066195E32860905D008DEC29 /* SubWalletTabView.swift in Sources */,
 				0672182528606975001534E6 /* WalletJSONAccount.swift in Sources */,
 				06721822286068F4001534E6 /* SubWalletID.swift in Sources */,
 				0672181C286063C9001534E6 /* MockJSON.swift in Sources */,
 				0672180F28600CF4001534E6 /* TabContentView.swift in Sources */,
 				067217DD286004BF001534E6 /* WalletApp.swift in Sources */,
+				066195EA2860913A008DEC29 /* InboxTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
