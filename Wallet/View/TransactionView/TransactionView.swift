@@ -18,6 +18,7 @@ struct TransactionView: View {
         GeometryReader { geometry in
             NavigationView {
                 VStack {
+                    // The list is great for things like settings, but for a lot more control I could've used a scrollView.
                     List {
                         TransactionHeaderView.init(transaction: $transaction)
                         
@@ -25,7 +26,7 @@ struct TransactionView: View {
                         
                         TransactionCarefulView(transaction: $transaction)
                         
-                        TransactionNonceSectionViews(transaction: $transaction)
+                        TransactionGasSectionViews(transaction: $transaction)
                         
                         TransactionWalletPolicyViews(transaction: $transaction)
                         
@@ -117,7 +118,7 @@ struct TransactionWalletPolicyViews: View {
                     Text("Your device")
                         .fontWeight(.semibold)
                     
-                    Text("0403d89e1a1701c900c0b3722f4b33c3b6f972729c82e827cccff73bbf25643c8b1cfcd47792f3d91b68be14a60fd1")
+                    Text(transaction.data?.jsonAccount?.devicePublicKey?.devices[0] ??  "0403d89e1a1701c900c0b3722f4b33c3b6f972729c82e827cccff73bbf25643c8b1cfcd47792f3d91b68be14a60fd1")
                         .font(.system(size: 8.0))
                         .foregroundColor(.gray)
                         .fontWeight(.semibold)
@@ -143,7 +144,7 @@ struct TransactionWalletPolicyViews: View {
     }
 }
 
-struct TransactionNonceSectionViews: View {
+struct TransactionGasSectionViews: View {
     @Binding var transaction: WalletFullTransaction
     
     var body: some View {
@@ -286,7 +287,7 @@ struct TransactionNetworkView: View {
                 
                 Spacer()
                 
-                AsyncImage(url: URL(string: String(transaction.data?.sourceImageURL ?? "https://image.shutterstock.com/image-photo/young-disabled-african-american-woman-600w-1950710665.jpg"))!) { image in
+                AsyncImage(url: URL(string: String(transaction.data?.sourceImageURL ?? "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1200px-MetaMask_Fox.svg.png"))!) { image in
                     image.resizable()
                 } placeholder: {
                     ProgressView()
@@ -318,7 +319,7 @@ struct TransactionFromAddressView: View {
                     Text(transaction.data?.jsonAccount?.accountName ?? "My first name")
                         .font(.body)
                     
-                    Text(String(transaction.data?.jsonCurrency?.amount ?? 83.174823687451624) + " " + "ETH")
+                    Text(String(transaction.data?.jsonAccount?.jsonCurrency?.amount ?? 83.174823687451624) + " " + String(transaction.data?.assetSymbol ?? "ETH"))
                         .font(.footnote)
                 }
                 
@@ -361,7 +362,7 @@ struct TransactionAmountSentView: View {
             Spacer().frame(height: 6.5)
             
             HStack {
-                AsyncImage(url: URL(string: String(transaction.data?.jsonAccount?.imageURL ?? "https://image.shutterstock.com/image-photo/young-disabled-african-american-woman-600w-1950710665.jpg"))!) { image in
+                AsyncImage(url: URL(string: String(transaction.data?.jsonAccount?.imageURL ?? "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png"))!) { image in
                     image.resizable()
                 } placeholder: {
                     ProgressView()
@@ -401,10 +402,14 @@ struct TransactionCostView: View {
             Spacer().frame(height: 6.5)
             
             HStack {
-                AsyncImage(url: URL(string: String(transaction.data?.jsonAccount?.imageURL ?? "https://image.shutterstock.com/image-photo/young-disabled-african-american-woman-600w-1950710665.jpg"))!) { image in
-                    image.resizable()
-                } placeholder: {
-                    ProgressView()
+                ZStack {
+                    AsyncImage(url: URL(string: String(transaction.data?.jsonAccount?.imageURL ?? "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png"))!) { image in
+                        image.resizable()
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .id(transaction.data?.jsonAccount?.accountPublicKey ?? "random")
+                    .frame(width: 35, height: 35)
                 }
                 .frame(width: 35, height: 35)
                 

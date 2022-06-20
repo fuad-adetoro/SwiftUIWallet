@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct WalletDevicePublicKey: Codable {
-    var keys: [PublicKeysss]
-}
+/*protocol WalletDevice {
+    
+}*/
 
-struct PublicKeysss: Codable {
-    var deviceID: String
+struct WalletDevicePublicKey: Codable {
+    var devices: [String]
 }

@@ -61,21 +61,12 @@ struct InboxTransactionsView: View {
             Spacer().frame(height: 7)
             
             Button {
-                print("CLICKED!!")
-                
                 self.viewControllerHolder?.present(style: .formSheet) {
                     TransactionView(transaction: $result)
                 }
             } label: {
                 HStack {
                     Spacer().frame(width: 10)
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(12)) {
-                                self.viewControllerHolder?.present(style: .formSheet) {
-                                    TransactionView(transaction: $result)
-                                }
-                            }
-                        }
                     
                     InboxRectangleView(text:
                             .constant(
@@ -98,6 +89,13 @@ struct InboxTransactionsView: View {
             }
             
             Spacer().frame(height: 7)
+        }
+        .onTapGesture {
+            // back up for button up top not working unless long pressed...
+            
+            self.viewControllerHolder?.present(style: .formSheet) {
+                TransactionView(transaction: $result)
+            }
         }
     }
 }
@@ -129,7 +127,7 @@ struct InboxImageView: View {
         HStack {
             Spacer()
             
-            AsyncImage(url: URL(string: String(result.data?.sourceImageURL ?? "https://image.shutterstock.com/image-photo/young-disabled-african-american-woman-600w-1950710665.jpg"))!) { image in
+            AsyncImage(url: URL(string: String(result.data?.sourceImageURL ?? "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1200px-MetaMask_Fox.svg.png"))!) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()

@@ -13,8 +13,6 @@ struct WalletData: Codable {
     
     var jsonAccount: WalletJSONAccount?
     var transaction: WalletJSONTransaction?
-    var jsonCurrency: WalletJSONCurrency? = nil
-    var devicePublicKey: WalletDevicePublicKey? = nil
     
     init(from decoder: Decoder) throws {
         let valuesInContainer = try decoder.container(keyedBy: CodingKeys.self)
@@ -73,8 +71,6 @@ struct WalletData: Codable {
         case assetRate = "assetRate"
         case jsonAccount = "account"
         case transaction = "transaction"
-        case jsonCurrency = "balanceCurrency"
-        case devicePublicKey = "devicePublicKey"
     }
 }
 

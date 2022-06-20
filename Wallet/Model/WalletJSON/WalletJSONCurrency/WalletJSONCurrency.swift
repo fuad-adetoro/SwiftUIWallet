@@ -8,31 +8,30 @@
 import Foundation
 
 struct WalletJSONCurrency: Codable {
-    //var unitAmount, decimals: Int?
-    var amount: Double?
-    //var convertedCurrency, timestamp: String?
+    var decimals: Int?
+    var amount, convertedAmount: Double?
+    var unitAmount, convertedCurrency, timestamp: String?
     
     enum CodingKeys: String, CodingKey {
-        case amount = "amount" 
+        case amount = "amount"
+        case convertedCurrency = "convertedCurrency"
+        case timestamp = "timestamp"
+        case unitAmount = "unitAmount"
+        case convertedAmount = "convertedAmount"
+        case decimals = "decimals"
     }
     
-    /*init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let valuesInContainer = try decoder.container(keyedBy: CodingKeys.self)
         convertedCurrency = try valuesInContainer.decode(String.self, forKey: .convertedCurrency)
         timestamp = try valuesInContainer.decode(String.self, forKey: .timestamp)
+        unitAmount = try valuesInContainer.decode(String.self, forKey: .unitAmount)
         
         if let decimalsRaw = try? valuesInContainer.decode(String.self, forKey: .decimals),
             let decimalsString = Int(decimalsRaw) {
             decimals = decimalsString
         } else {
             decimals = try valuesInContainer.decode(Int.self, forKey: .decimals)
-        }
-        
-        if let unitAmountStringRaw = try? valuesInContainer.decode(String.self, forKey: .unitAmount),
-            let unitAmountString = Int(unitAmountStringRaw) {
-            unitAmount = unitAmountString
-        } else {
-            unitAmount = try valuesInContainer.decode(Int.self, forKey: .unitAmount)
         }
         
         if let amountStringRaw = try? valuesInContainer.decode(String.self, forKey: .amount),
@@ -47,8 +46,8 @@ struct WalletJSONCurrency: Codable {
             convertedAmount = amountString
         } else {
             convertedAmount = try valuesInContainer.decode(Double.self, forKey: .convertedAmount)
-        }
-    }*/
+        } 
+    }
 }
 
 
