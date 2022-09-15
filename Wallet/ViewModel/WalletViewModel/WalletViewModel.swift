@@ -11,9 +11,7 @@ protocol WalletBased {
     func loadData()
 }
 
-public class WalletViewModel: ObservableObject, WalletBased {
-    static let shared = WalletViewModel.init()
-    
+public class WalletViewModel: ObservableObject, WalletBased { 
     @Published var isLoading = false
     @Published var error: Error? = nil
     @Published var results: [WalletFullTransaction] = []
