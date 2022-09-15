@@ -11,7 +11,7 @@ import UIKit
 struct InboxTabView: View {
     @Binding var selectedTab: Int
     
-    @ObservedObject var viewModel: WalletViewModel = .shared
+    @ObservedObject var viewModel = WalletViewModel()
     
     var body: some View {
         TabContentView {
